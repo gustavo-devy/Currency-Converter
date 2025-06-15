@@ -1,16 +1,65 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>replit</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+  <title>Conversor de Moedas - By Gustavo</title>
 </head>
-
 <body>
-  Hello world
-  <script src="script.js"></script>
+  
+  <main class="main-content">
+    <h1>Conversor de Moedas</h1>
+    
+    <form id="convert-form" class="form-converter-panel">
+      
+      <div class="select-value-panel">
+        <label for="currency-value">Valor</label>
+        <input id="currency-value" type="number" placeholder="Exemplo: 1200" required/>
+      </div>
+      
+      <div class="select-currency-panel">
+        <div>
+          <label for="currency-of">De</label>
+          <select class="select-currency-of">
+            <option class="select-option" selected>BRL</option>
+            <option class="select-option">USD</option>
+            <option class="select-option">EUR</option>
+            <option class="select-option">JPY</option>
+            <option class="select-option">GBP</option>
+            <option class="select-option">AUD</option>
+            <option class="select-option">CHF</option>
+          </select>
+        </div>
+        
+        <div>
+          <label class="currency-to">Para</label>
+          <select class="select-currency-to">
+            <option class="select-option" selected>USD</option>
+            <option class="select-option">BRL</option>
+            <option class="select-option">EUR</option>
+            <option class="select-option">JPY</option>
+            <option class="select-option">GBP</option>
+            <option class="select-option">AUD</option>
+            <option class="select-option">CHF</option>
+          </select>
+        </div>
+        
+      </div>
+      
+      <div class="loading"></div>
+      
+      <div class="result">
+        <h2></h2>
+        <span></span>
+      </div>
+      
+      <button id="convert-button" type="submit">Converter</button>
+    </form>
+    
+    <p>💡Cotações 100% atualizada em tempo real!</p>
+  </main>
+  
 </body>
-
 </html>
