@@ -23,6 +23,7 @@ convert_form.addEventListener("submit", (event) =>
   if (Number(value_currency) <= 0 || Number(value_currency) > 1000000000)
   {
     alert("Digite um valor válido!");
+    return;
   }
 
   GetDataCurrency(from_currency, to_currency, value_currency);
